@@ -1,0 +1,199 @@
+/* Reset and base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f2f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2d98da;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd32a;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom right, #74b9ff, #a29bfe);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.hero h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+  color: #ffeaa7;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+/* Products */
+.products {
+  padding: 3em 1em;
+  background-color: #ffffff;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 2em;
+  color: #2d3436;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+
+.product {
+  background: #f1f2f6;
+  padding: 1em;
+  border-radius: 10px;
+  max-width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #27ae60;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+.buy-button {
+  display: inline-block;
+  margin-top: 1em;
+  background: #25D366;
+  color: white;
+  padding: 0.5em 1.2em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.buy-button:hover {
+  background: #20c35e;
+}
+
+/* Accessories */
+.accessories {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.accessory {
+  background-color: #f9f9f9;
+  padding: 1em;
+  border-left: 5px solid #2d98da;
+}
+
+/* About + Contact */
+#about {
+  padding: 2em 1em;
+  background-color: #ecf0f1;
+  text-align: center;
+}
+
+#contact {
+  padding: 2em 1em;
+  background-color: #d1ecf1;
+  text-align: center;
+}
+
+.ceo-container {
+  margin: 2em auto;
+}
+
+.ceo-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #3498db;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ceo-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.ceo-name {
+  margin-top: 1em;
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #2d98da;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
