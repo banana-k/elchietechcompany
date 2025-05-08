@@ -108,19 +108,25 @@ nav a:hover {
   margin-top: 0.5em;
 }
 
+/* Enhanced Buy Button */
 .buy-button {
   display: inline-block;
   margin-top: 1em;
   background: #25D366;
   color: white;
-  padding: 0.5em 1.2em;
-  border-radius: 5px;
+  padding: 0.6em 1.4em;
+  border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s;
+  font-weight: bold;
+  font-size: 1em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .buy-button:hover {
   background: #20c35e;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Accessories */

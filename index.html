@@ -23,9 +23,9 @@
 
   <section class="hero" id="home">
     <div class="hero-text">
-      <h1>SmartCell Shop</h1>
+      <h1>Gadgets and Accessories Shop</h1>
       <h2>ELCHIE TECH COMPANY</h2>
-      <p>Experience Premium Smartphones at Unbeatable Prices.</p>
+      <p>Experience Premium Smartphones, Laptops and related accessories at Unbeatable Prices.</p>
       <p>Top Quality. Trusted Delivery. Tech You Can Rely On.</p>
     </div>
   </section>
@@ -33,60 +33,60 @@
   <section class="products" id="gallery">
     <h2>Phones and Laptops on Sale</h2>
     <div class="product-list">
-      <div class="product">
+      <div class="product" data-name="iPhone Pro">
         <img src="iphone.png" alt="iPhone Pro" />
         <h3>iPhone Pro</h3>
         <p>128GB, A16 Bionic, 5G</p>
         <p class="price">$999</p>
-        <a href="https://wa.me/971524881837" class="buy-button">Buy on WhatsApp</a>
+        <a href="#" class="buy-button" onclick="sendWhatsApp(this)">Buy on WhatsApp</a>
       </div>
 
-      <div class="product">
+      <div class="product" data-name="Samsung Galaxy A55">
         <img src="samsung.png" alt="Samsung Galaxy A55" />
         <h3>Samsung Galaxy A55</h3>
         <p>256GB, AMOLED, Triple Camera</p>
         <p class="price">$550</p>
-        <a href="https://wa.me/971524881837" class="buy-button">Buy on WhatsApp</a>
+        <a href="#" class="buy-button" onclick="sendWhatsApp(this)">Buy on WhatsApp</a>
       </div>
 
-      <div class="product">
+      <div class="product" data-name="HP Pavilion 15">
         <img src="laptop1.PNG" alt="HP Pavilion" />
         <h3>HP Pavilion 15</h3>
         <p>Intel i5, 8GB RAM, 512GB SSD, Windows 11</p>
         <p class="price">$750</p>
-        <a href="https://wa.me/971524881837" class="buy-button">Buy on WhatsApp</a>
+        <a href="#" class="buy-button" onclick="sendWhatsApp(this)">Buy on WhatsApp</a>
       </div>
 
-      <div class="product">
+      <div class="product" data-name="Dell Inspiron 14">
         <img src="laptop2.PNG" alt="Dell Inspiron" />
         <h3>Dell Inspiron 14</h3>
         <p>Intel i7, 16GB RAM, 1TB SSD, Windows 11</p>
         <p class="price">$999</p>
-        <a href="https://wa.me/971524881837" class="buy-button">Buy on WhatsApp</a>
+        <a href="#" class="buy-button" onclick="sendWhatsApp(this)">Buy on WhatsApp</a>
       </div>
     </div>
 
     <h2>Accessories on Sale</h2>
     <div class="accessories">
-      <div class="accessory">
+      <div class="accessory" data-name="Wireless Earbuds">
         <h3>Wireless Earbuds</h3>
         <p>Bluetooth 5.0, Noise Cancellation</p>
         <p class="price">$45</p>
-        <a href="https://wa.me/971524881837" class="buy-button">Buy on WhatsApp</a>
+        <a href="#" class="buy-button" onclick="sendWhatsApp(this)">Buy on WhatsApp</a>
       </div>
 
-      <div class="accessory">
+      <div class="accessory" data-name="Phone Charger 25W">
         <h3>Phone Charger 25W</h3>
         <p>Fast Charging, USB-C Compatible</p>
         <p class="price">$20</p>
-        <a href="https://wa.me/971524881837" class="buy-button">Buy on WhatsApp</a>
+        <a href="#" class="buy-button" onclick="sendWhatsApp(this)">Buy on WhatsApp</a>
       </div>
 
-      <div class="accessory">
+      <div class="accessory" data-name="Laptop Cooling Pad">
         <h3>Laptop Cooling Pad</h3>
         <p>USB Powered, 5-Fan System</p>
         <p class="price">$30</p>
-        <a href="https://wa.me/971524881837" class="buy-button">Buy on WhatsApp</a>
+        <a href="#" class="buy-button" onclick="sendWhatsApp(this)">Buy on WhatsApp</a>
       </div>
     </div>
   </section>
@@ -97,20 +97,33 @@
       <a href="ceo-bio.html">
         <img src="ceo.jpg" alt="CEO Photo" class="ceo-img" />
       </a>
-      <h3 class="ceo-name">Elba Mbozi</h3>
+      <h3 class="ceo-name">Elba Mujokozera</h3>
     </div>
-    <p>ELCHIE TECH COMPANY has been delivering top-quality smartphones and electronics at unbeatable prices since 2020.</p>
+    <p>ELCHIE TECH COMPANY has been delivering top-quality smartphones, laptops and related accessories at unbeatable prices since 2024.</p>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
     <p>WhatsApp: <a href="https://wa.me/971524881837">+971 52 488 1837</a></p>
-    <p>Email: elbambozi@gmail.com</p>
-    <p>Location: 283 Kambuzuma, Harare</p>
+    <p>Email: elba.mujokozera@icloud.com</p>
+    <p>Call us on: +263783964573</p>
   </section>
 
   <footer>
     <p>&copy; 2025 Elchie Tech Company. All rights reserved.</p>
   </footer>
+
+  <!-- WhatsApp message script -->
+  <script>
+    function sendWhatsApp(button) {
+      const parent = button.closest('.product, .accessory');
+      const productName = parent.getAttribute('data-name') || "a product";
+      const message = `HelloElchieTech, I would like to inquire about ${productName} that I saw on your website...`;
+      const encodedMessage = encodeURIComponent(message);
+      const phone = "971524881837";
+      const whatsappURL = `https://wa.me/${phone}?text=${encodedMessage}`;
+      window.open(whatsappURL, '_blank');
+    }
+  </script>
 </body>
 </html>
